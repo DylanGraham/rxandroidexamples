@@ -13,9 +13,7 @@ import rx.subjects.PublishSubject;
 public class Example4Activity extends AppCompatActivity {
 
     private TextView mCounterDisplay;
-    private Button mIncrementButton;
     private PublishSubject<Integer> mCounterEmitter;
-
     private int mCounter = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +54,7 @@ public class Example4Activity extends AppCompatActivity {
     }
 
     private void configureIncrementButton() {
+        Button mIncrementButton;
         mIncrementButton = (Button) findViewById(R.id.increment_button);
         mIncrementButton.setOnClickListener(new View.OnClickListener() {
             @Override
